@@ -1,0 +1,116 @@
+.calendar {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  border: 1px solid var(--border-primary);
+}
+
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.calendarNav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.calendarNav button {
+  background: none;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+  color: var(--text-primary);
+}
+
+.calendarNav button:hover {
+  background: var(--bg-primary);
+  border-color: var(--primary);
+}
+
+.calendarNav h3 {
+  margin: 0 12px;
+  min-width: 150px;
+  text-align: center;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendarWeekday {
+  text-align: center;
+  font-weight: 600;
+  padding: 8px 0;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.calendarDay {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  min-height: 40px;
+}
+
+.calendarDay:hover {
+  background: var(--bg-primary);
+}
+
+.calendarDay.empty {
+  cursor: default;
+}
+
+.calendarDay.today {
+  background: var(--primary);
+  color: white;
+}
+
+.calendarDay.today:hover {
+  background: #1414cc;
+}
+
+.calendarDay.hasTask {
+  background: var(--border-secondary);
+  color: white;
+}
+
+.calendarDay.hasTask:hover {
+  background: var(--primary);
+}
+
+.dayNumber {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.taskIndicator {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  font-size: 0.6rem;
+  background: var(--warning);
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
