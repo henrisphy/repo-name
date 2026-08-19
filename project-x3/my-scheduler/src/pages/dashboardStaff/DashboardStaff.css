@@ -1,0 +1,18 @@
+.dashboardLayout {
+  display: flex;
+  min-height: calc(100vh - 140px);
+}
+
+.dashboardMain {
+  flex: 1;
+  padding: 24px;
+  background: var(--bg-primary);
+  margin-left: 260px;
+}
+
+@media (max-width: 768px) {
+  .dashboardMain {
+    margin-left: 0;
+    padding: 16px;
+  }
+}
